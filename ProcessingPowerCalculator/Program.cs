@@ -39,11 +39,10 @@ namespace ProcessingPowerCalculator
                         continue;
                     }
 
-                    // Calculam numarul de ani folosind formula (log2 2*(n-1))*1.5
+                    // Calculam numarul de ani folosind formula (log2 n)*1.5
                     // 1.5 - 1 an si jumatate (18 luni/12 luni)
-                    // 2 * (n - 1) - dublarea de (n - 1) ori
                     // Rotunjim rezultatul la un numar cu o cifra decimala
-                    double years = Math.Round(Math.Log(2*(n-1),2) * 1.5, 1);
+                    double years = Math.Log(n,2) * 1.5;
 
                     // Afisam rezultatul
                     Console.WriteLine($"The Processing Power will encrease {n} times for the same price in {years} years!");
